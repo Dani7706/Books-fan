@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+body {
+  font-size: 62.5%;
+}
+.container {
+  width: 130rem;
+}
+li {
+  list-style: none;
+}
+.header {
+  height: 5rem;
+  background-color: rgba(255, 242, 232, 0.808);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+.list-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #7f3f0a;
+  gap: 1.5rem;
+}
+.list-nav li {
+  font-size: 1.6rem;
+}
+.hero {
+  width: 100vw;
+  height: 80vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 192, 120, 0.508),
+      rgba(253, 126, 23, 0.508)
+    ),
+    url("../img/ben-white-7BiMECHFgFY-unsplash.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+  display: flex;
+  align-items: center;
+}
+.hero-description {
+  width: 60%;
+  padding-left: 5rem;
+  backface-visibility: hidden;
+}
+.hero-title {
+  font-size: 4.4rem;
+  color: #653208;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  line-height: 1.1;
+  margin-bottom: 6.4rem;
+  animation-name: moveInLeft;
+  animation-duration: 4s;
+}
+.hero-author {
+  font-size: 2.4rem;
+  color: #7f3f0a;
+  font-weight: 500;
+  animation-name: moveInRight;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+}
+.logo {
+  width: 5rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
